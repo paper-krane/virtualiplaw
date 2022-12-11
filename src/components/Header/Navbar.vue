@@ -52,7 +52,7 @@ const navStatus = inject('navStatus');
         height: 1px;
         right: 0;
         bottom: 0;
-        background-color: rgba($gold, .5);
+        background-color: rgba(darken($site-bg, 10%), .5);
         pointer-events: none;
     }
 
@@ -202,7 +202,7 @@ const navStatus = inject('navStatus');
                 align-items: center;
                 list-style: none;
 
-                a:not(.btn), a:not(.btn):visited {
+                a:not(.vi__btn), a:not(.vi__btn):visited {
                     display: block;
                     height: 42px;
                     line-height: 42px;
@@ -212,6 +212,11 @@ const navStatus = inject('navStatus');
                     // letter-spacing: .2em;
                     font-size: .825rem;
                     color: $font-color;
+                }
+
+                a.vi__btn, a.vi__btn:visited {
+                    font-size: .825rem;
+                    margin-left: 1.5rem;
                 }
             }
         }

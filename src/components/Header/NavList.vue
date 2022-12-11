@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router';
             <RouterLink to="#">Contact</RouterLink>
         </li>
         <li>
-            <RouterLink to="#" class="btn">Schedule a Consultation</RouterLink>
+            <RouterLink to="#" class="vi__btn small outline">Schedule a Consultation</RouterLink>
         </li>
     </ul>
 </nav>
@@ -24,7 +24,7 @@ import { RouterLink } from 'vue-router';
 <style scoped lang="scss">
 @import '@/assets/scss/variables';
 
-nav a:not(.btn) {
+nav a:not(.vi__btn) {
     font-family: $heading-font-stack;
 }
 </style>

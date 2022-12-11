@@ -1,5 +1,5 @@
 <script setup>
-
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
@@ -16,6 +16,12 @@
                         <h1>Protecting Ideas, Securing Dreams & Supporting the Inventors of Tomorrow</h1>
                         <p>Navigating intellectual property law can be daunting so let out team handle the entire
                             process while do what you love.</p>
+                        <RouterLink class="vi__btn" to="#">
+                            View Our Services
+                        </RouterLink>
+                        <RouterLink class="vi__btn minimal" to="#">
+                            Meet the Team
+                        </RouterLink>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+$fold-screen: 319.98px !default;
 $mobile-screen: 599.98px !default;
 $tablet-screen-down: 991.98px !default;
 $desktop-screen-down: 1279.98px !default;
@@ -18,15 +19,21 @@ $xl-and-up: "only screen and (min-width : #{$desktop-screen-up})" !default;
 $xxl-and-up: "only screen and (min-width : #{$desktop-large-screen-up})" !default;
 $xxxl-and-up: "only screen and (min-width : #{$desktop-extra-large-screen-up})" !default;
 
+$dark-mode: "(prefers-color-scheme: dark)" !default;
+
 // Colors 
 $site-bg: #d9d8d4 !default;
 $dark-site-bg: #27282c !default;
 $font-color: #272625 !default;
-$font-accent-color: #a2907c !default;
+$font-accent-color: #64666c !default;
 $heading-font-color: #11110f !default;
-$primary-color: #6e6356 !default;
-$secondary-color: #000000 !default;
-$highlight-color: $primary-color !default;
+$primary-color: #376147 !default;
+$secondary-color: #74C29C !default;
+$primary-accent-color: lighten($primary-color, 10%) !default;
+$secondary-accent-color: darken($secondary-color, 10%) !default;
+$primary-gradient: linear-gradient(45deg, $secondary-color 0%, $primary-color 100%);
+$primary-accent-gradient: linear-gradient(45deg, $secondary-accent-color 0%, $primary-accent-color 100%);
+$highlight-color: rgba($primary-color, .5) !default;
 $white: #ffffff !default;
 $black: #000000 !default;
 $gold: #E0C084 !default;
@@ -39,6 +46,12 @@ $heading-font-weight: 300 !default;
 $signature-font-stack: 'emithascript' !default;
 $signature-font-weight: normal !default;
 
+$h1-fontsize-xs-mobile: 1.75rem !default;
+$h2-fontsize-xs-mobile: 1.6rem !default;
+$h3-fontsize-xs-mobile: 1.5rem !default;
+$h4-fontsize-xs-mobile: 1.4rem !default;
+$h5-fontsize-xs-mobile: 1.25rem !default;
+$h6-fontsize-xs-mobile: 1.15rem !default;
 $h1-fontsize-mobile: 2.5rem !default;
 $h2-fontsize-mobile: 2rem !default;
 $h3-fontsize-mobile: 1.75rem !default;
@@ -60,3 +73,4 @@ $h6-fontsize-desktop: 1.5rem !default;
 
 // Design Rules
 $transition: all 0.4s ease !default;
+$border-radius: 56px;
