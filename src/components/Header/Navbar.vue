@@ -215,7 +215,7 @@ const navStatus = inject('navStatus');
                 }
 
                 a.vi__btn, a.vi__btn:visited {
-                    font-size: .825rem;
+                    font-size: .875rem;
                     margin-left: 1.5rem;
                 }
             }

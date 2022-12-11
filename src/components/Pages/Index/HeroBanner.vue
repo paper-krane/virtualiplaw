@@ -17,10 +17,20 @@ import { RouterLink } from 'vue-router';
                         <p class="text-hero">Navigating intellectual property law can be daunting so let out team handle the entire
                             process while do what you love.</p>
                         <RouterLink class="vi__btn" to="#">
+                            <span class="icon left">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
                             View Our Services
                         </RouterLink>
                         <RouterLink class="vi__btn minimal" to="#">
                             Meet the Team
+                            <span class="icon right">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
                         </RouterLink>
                     </div>
                 </div>
@@ -70,6 +80,26 @@ import { RouterLink } from 'vue-router';
 
     .vi__content {
         position: relative;
+
+        h1 {
+            font-size: 8vw;
+        }
+    }
+
+    @media #{$m-and-up} {
+        .vi__content {
+            h1 {
+                font-size: 8vw;
+            }
+        }
+    }
+
+    @media #{$l-and-up} {
+        .vi__content {
+            h1 {
+                font-size: 5vw;
+            }
+        }
     }
 
     @media #{$xl-and-up} {
@@ -111,9 +141,30 @@ import { RouterLink } from 'vue-router';
             }
         }
 
-        // .vi__content {
-        //     position: relative;
-        // }
+        .vi__content {
+            h1 {
+                font-size: 4.5vw;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1800px) {
+        .vi__hero-video {
+            position: absolute;
+            right: -26vw;
+            top: 20vh;
+            height: 100%;
+            width: 62.8vw;
+            height: 62.8vw;
+            border-radius: 50%;
+            margin-left: auto;
+        }
+
+        .vi__content {
+            h1 {
+                font-size: 4vw;
+            }
+        }
     }
 }
 </styles>

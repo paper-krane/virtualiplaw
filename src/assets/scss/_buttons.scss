@@ -2,7 +2,7 @@
 
 .vi__btn {
     font-family: $heading-font-stack;
-    font-size: 1rem;
+    font-size: .875rem;
     font-weight:inherit;
     border: none;
     border-radius: math.div($border-radius, 4);
@@ -21,6 +21,8 @@
 	-moz-osx-font-smoothing: grayscale;
     z-index: 0;
     overflow: hidden;
+    display: inline-flex;
+    align-items: center;
 
     &:before {
         content: '';
@@ -33,6 +35,31 @@
         // background-image: $primary-gradient; 
         z-index: -1;
         transition: opacity 0.4s ease;
+    }
+
+    .icon {
+        display: inline-block;
+        width: 24px;
+
+        &.left {
+            margin-right: 10px;;
+        }
+
+        &.right {
+            margin-left: 10px;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+            transition: $transition;
+
+            path {
+                transition: $transition;
+                fill: $white;
+                stroke: $white;
+            }
+        }
     }
 }
 
@@ -64,6 +91,15 @@
         &:before {
             content: none;
         }
+
+        .icon {
+            svg {
+                path {
+                    fill: $font-color;
+                    stroke: $font-color;
+                }
+            }
+        }
     }
 
     &.minimal {
@@ -74,6 +110,15 @@
         
         &:before {
             content: none;
+        }
+
+        .icon {
+            svg {
+                path {
+                    fill: $font-color;
+                    stroke: $font-color;
+                }
+            }
         }
     }
 }
@@ -87,14 +132,38 @@
         opacity: 0;
     }
 
+    .icon {
+        svg {
+            transform: translate(-5px, 0);
+        }
+    }
+
     &.outline {
         border-color: $primary-accent-color;
         color: $white;
+
+        .icon {
+            svg {
+                path {
+                    fill: $primary-accent-color;
+                    stroke: $primary-accent-color;
+                }
+            }
+        }
     }
 
     &.minimal {
         background-color: transparent;
         background-image: none;
         color: $primary-accent-color;
+
+        .icon {
+            svg {
+                path {
+                    fill: $primary-accent-color;
+                    stroke: $primary-accent-color;
+                }
+            }
+        }
     }
 }
