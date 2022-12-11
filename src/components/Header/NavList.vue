@@ -8,6 +8,9 @@ import { RouterLink } from 'vue-router';
         <li>
             <RouterLink to="#">Disciplines</RouterLink>
         </li>
+        <li>
+            <RouterLink to="#">Professionals</RouterLink>
+        </li>
     </ul>
 </nav>
 </template>
