@@ -3,6 +3,9 @@
 import { inject } from 'vue';
 import { RouterLink } from 'vue-router';
 
+// Components
+import NavList from '@/components/Header/NavList.vue';
+
 const navStatus = inject('navStatus');
 </script>
 
@@ -21,11 +24,14 @@ const navStatus = inject('navStatus');
                 <img src="@/assets/images/logo.svg" alt="Virtual IP Law, LLC" />
             </RouterLink>
         </div>
+        <div class="vi__desktop-nav">
+            <NavList />
+        </div>
     </div>
 </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '@/assets/scss/variables';
 
 #vi__navbar {
@@ -35,8 +41,8 @@ const navStatus = inject('navStatus');
     height: 86px;
     display: flex;
     align-items: center;
-    background-color: rgba($site-bg, .5);
-    backdrop-filter: blur(8px);
+    background-color: rgba($site-bg, .1);
+    backdrop-filter: blur(10px);
 
 
     &:before {
@@ -134,29 +140,35 @@ const navStatus = inject('navStatus');
         }
     }
 
+    .vi__desktop-nav {
+        display: none;
+    }
+
     @media #{$xl-and-up} {
         height: 156px;
+        backdrop-filter: none;
+        background-color: transparent;
 
         &:before {
-            content: '';
-            position: absolute;
-            width: 92.5%;
-            height: 1px;
-            right: 0;
-            bottom: 0;
-            background-color: rgba($gold, .5);
-            pointer-events: none;
+            content: none;
+            // position: absolute;
+            // width: 92.5%;
+            // height: 1px;
+            // right: 0;
+            // bottom: 0;
+            // background-color: rgba($gold, .5);
+            // pointer-events: none;
         }
 
         &:after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 2px;
-            left: 7.5%;
-            bottom: 0;
-            background-color: lighten($font-color, 30%);
-            pointer-events: none;
+            content: none;
+            // position: absolute;
+            // width: 16px;
+            // height: 2px;
+            // left: 7.5%;
+            // bottom: 0;
+            // background-color: lighten($font-color, 30%);
+            // pointer-events: none;
         }
 
         #vi__logo {
@@ -169,8 +181,39 @@ const navStatus = inject('navStatus');
             }
         }
 
+        .vi__container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
         .vi__nav-toggle {
             display: none;
+        }
+
+        .vi__desktop-nav {
+            margin-left: auto;
+            display: block;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                list-style: none;
+
+                a:not(.btn), a:not(.btn):visited {
+                    display: block;
+                    height: 42px;
+                    line-height: 42px;
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                    // text-transform: uppercase;
+                    // letter-spacing: .2em;
+                    font-size: .825rem;
+                    color: $font-color;
+                }
+            }
         }
     }
 }

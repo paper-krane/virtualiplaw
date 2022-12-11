@@ -6,14 +6,25 @@ import { RouterLink } from 'vue-router';
 <nav>
     <ul>
         <li>
-            <RouterLink to="#">Disciplines</RouterLink>
+            <RouterLink to="#">Services</RouterLink>
         </li>
         <li>
-            <RouterLink to="#">Professionals</RouterLink>
+            <RouterLink to="#">About</RouterLink>
+        </li>
+        <li>
+            <RouterLink to="#">Contact</RouterLink>
+        </li>
+        <li>
+            <RouterLink to="#" class="btn">Schedule a Consultation</RouterLink>
         </li>
     </ul>
 </nav>
 </template>
 
 <style scoped lang="scss">
+@import '@/assets/scss/variables';
+
+nav a:not(.btn) {
+    font-family: $heading-font-stack;
+}
 </style>

@@ -26,7 +26,7 @@ $font-accent-color: #a2907c !default;
 $heading-font-color: #11110f !default;
 $primary-color: #6e6356 !default;
 $secondary-color: #000000 !default;
-$highlight-color: #e2d7d7 !default;
+$highlight-color: $primary-color !default;
 $white: #ffffff !default;
 $black: #000000 !default;
 $gold: #E0C084 !default;

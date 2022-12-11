@@ -5,9 +5,31 @@
     margin-left: auto;
     margin-right: auto;
 
+    &.desktop {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.large {
+        max-width: 1280px;
+    }
+
     @media #{$xl-and-up} {
         width: 85%;
         flex: 0 0 85%;
         max-width: 85%;
+
+        &.desktop {
+            width: 85%;
+            flex: 0 0 85%;
+            max-width: 85%;
+        }
+
+        &.large {
+            max-width: 1280px;
+        }
     }
 }
