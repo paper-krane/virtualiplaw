@@ -37,9 +37,11 @@ a *, button * {
 // Text selection
 ::selection {
     background: $highlight-color;
+    color: $white;
 }
 ::-moz-selection {
     background: $highlight-color;
+    color: $white;
 }
 
 

@@ -16,6 +16,20 @@ a {
     text-decoration: none;
 }
 
+// Helpers
+.text-hero {
+    font-size: 1.25rem;
+}
+.text-orange {
+    color: $orange;
+}
+.text-green {
+    color: $primary-color;
+    background-image: $primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 // Headings
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;

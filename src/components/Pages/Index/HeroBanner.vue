@@ -13,8 +13,8 @@ import { RouterLink } from 'vue-router';
             <div class="vi__overlay">
                 <div class="vi__container">
                     <div class="vi__content">
-                        <h1>Protecting Ideas, Securing Dreams & Supporting the Inventors of Tomorrow</h1>
-                        <p>Navigating intellectual property law can be daunting so let out team handle the entire
+                        <h1>Protecting <span class="text-green">Ideas</span>, Securing <span class="text-green">Dreams</span> & Supporting the Inventors of Tomorrow</h1>
+                        <p class="text-hero">Navigating intellectual property law can be daunting so let out team handle the entire
                             process while do what you love.</p>
                         <RouterLink class="vi__btn" to="#">
                             View Our Services
@@ -90,7 +90,7 @@ import { RouterLink } from 'vue-router';
         .vi__hero-video {
             position: absolute;
             right: -31.4vw;
-            bottom: -20vw;
+            top: 20vh;
             height: 100%;
             width: 62.8vw;
             height: 62.8vw;
@@ -100,7 +100,7 @@ import { RouterLink } from 'vue-router';
 
         .vi__overlay {
             order: 0;
-            flex: 0 0 calc(100% - 20vw);
+            flex: 0 0 calc(100% - 10vw);
 
             .vi__container {
                 margin-left: 0;
