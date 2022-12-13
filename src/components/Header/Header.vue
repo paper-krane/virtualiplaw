@@ -15,7 +15,6 @@ const navStatus = inject('navStatus');
 const onEnter = (el, done) => {
     gsap.from(el, {
         opacity: 0,
-        height: 0,
         duration: .4,
         onComplete: done
     });
@@ -23,7 +22,6 @@ const onEnter = (el, done) => {
 const onLeave = (el, done) => {
     gsap.to(el, {
         opacity: 0,
-        height: 0,
         duration: .4,
         onComplete: done
     });
