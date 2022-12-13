@@ -14,15 +14,17 @@ const navStatus = inject('navStatus');
 // Functions 
 const onEnter = (el, done) => {
     gsap.from(el, {
-        opacity: 0,
-        duration: .4,
+        translateY: '-100%',
+        duration: 1.2,
+        ease: "power4.out",
         onComplete: done
     });
 } 
 const onLeave = (el, done) => {
     gsap.to(el, {
         opacity: 0,
-        duration: .4,
+        duration: .6,
+        ease: "power4.out",
         onComplete: done
     });
 }

@@ -5,6 +5,7 @@ import { RouterView } from 'vue-router';
 
 // Components
 import HeaderVue from '@/components/Header/Header.vue';
+import CursorVue from '@/components/Utilities/Cursor.vue';
 
 // Variables
 const navStatus = ref(false);
@@ -24,6 +25,7 @@ provide('navStatus', navStatus);
 
         </footer>
     </div>
+    <CursorVue />
 </template>
 
 <style scoped lang="scss">

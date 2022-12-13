@@ -1,10 +1,24 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+
+const props = defineProps({
+    hasSpacer: {
+        type: Boolean,
+        default: false
+    },
+    btnSmall: {
+        type: Boolean,
+        default: true
+    }
+})
 </script>
 
 <template>
 <nav>
     <ul>
+        <li>
+            <RouterLink to="/">Home</RouterLink>
+        </li>
         <li>
             <RouterLink to="#">Services</RouterLink>
         </li>
@@ -14,8 +28,9 @@ import { RouterLink } from 'vue-router';
         <li>
             <RouterLink to="#">Contact</RouterLink>
         </li>
+        <li v-if="hasSpacer" class="vi__spacer"></li>
         <li>
-            <RouterLink to="#" class="vi__btn small outline">Schedule a Consultation</RouterLink>
+            <RouterLink to="#" class="vi__btn" :class="{'small outline': btnSmall}">Schedule a Consultation</RouterLink>
         </li>
     </ul>
 </nav>
@@ -26,5 +41,8 @@ import { RouterLink } from 'vue-router';
 
 nav a:not(.vi__btn) {
     font-family: $heading-font-stack;
+}
+.vi__spacer {
+    margin-bottom: 3rem;
 }
 </style>

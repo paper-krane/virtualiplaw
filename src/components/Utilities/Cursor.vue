@@ -1,7 +1,10 @@
 <script setup>
-import { gsap } from 'gsap';
+import { onMounted } from 'vue';
 
-gsap.registerPlugin(ScrollTrigger, ExpoScaleEase);
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
     

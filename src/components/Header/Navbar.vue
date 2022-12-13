@@ -1,12 +1,24 @@
 <script setup>
 // Imports
-import { inject } from 'vue';
+import { inject, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // Components
 import NavList from '@/components/Header/NavList.vue';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const navStatus = inject('navStatus');
+onMounted(() => {
+    ScrollTrigger.create({
+        start: 'top -156',
+        end: 99999,
+        toggleClass: {className: 'vi__not-top', targets: '#vi__navbar'}
+    });
+});
 </script>
 
 <template>
@@ -151,12 +163,6 @@ const navStatus = inject('navStatus');
             }
         }
 
-        // &:hover {
-        //     div {
-        //         transform: rotate(90deg);
-        //     }
-        // }
-
         &.active {
             span {
                 top: 50%;
@@ -178,27 +184,16 @@ const navStatus = inject('navStatus');
         height: 156px;
         backdrop-filter: none;
         background-color: transparent;
+        transition: background-color 0.4s ease, backdrop-filter 0.4s ease, height 0.4s ease;
 
-        &:before {
+        &:before, &:after {
             content: none;
-            // position: absolute;
-            // width: 92.5%;
-            // height: 1px;
-            // right: 0;
-            // bottom: 0;
-            // background-color: rgba($gold, .5);
-            // pointer-events: none;
         }
 
-        &:after {
-            content: none;
-            // position: absolute;
-            // width: 16px;
-            // height: 2px;
-            // left: 7.5%;
-            // bottom: 0;
-            // background-color: lighten($font-color, 30%);
-            // pointer-events: none;
+        &.vi__not-top {
+            height: 108px;
+            background-color: rgba($site-bg, .7);
+            backdrop-filter: blur(10px);
         }
 
         #vi__logo {
@@ -220,6 +215,10 @@ const navStatus = inject('navStatus');
             position: relative;
             color: $font-color;
 
+            svg path {
+                transition: $transition;
+            }
+
             .vi__phone-text {
                 position: relative;
                 left: auto;
@@ -236,6 +235,16 @@ const navStatus = inject('navStatus');
                 left: 0;
                 transform: translate(0, -50%);
                 background-color: rgba(darken($site-bg, 20%), .5);
+            }
+        }
+
+        .vi__phone:hover, .vi__phone:focus {
+            color: $primary-accent-color;
+
+            svg {
+                path {
+                    fill: $primary-accent-color;
+                }
             }
         }
 
