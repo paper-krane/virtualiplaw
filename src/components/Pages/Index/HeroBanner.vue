@@ -216,7 +216,7 @@ onMounted(() => {
 
         .vi__hero-video {
             position: absolute;
-            right: -31.4vw;
+            right: -30vw;
             top: 20vh;
             height: 100%;
             width: 62.8vw;
@@ -225,7 +225,7 @@ onMounted(() => {
             margin-left: auto;
 
             video {
-                object-position: 75% 100%;
+                object-position: 80% 100%;
             }
         }
 
@@ -251,11 +251,13 @@ onMounted(() => {
 
     @media only screen and (min-width: 1800px) {
         .vi__hero-video {
-            right: -26vw;
+            position: absolute;
+            right: -24vw;
             top: 20vh;
             height: 100%;
             width: 62.8vw;
             height: 62.8vw;
+            margin-left: auto;
         }
 
         .vi__content {
