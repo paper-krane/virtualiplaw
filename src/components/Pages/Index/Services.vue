@@ -124,6 +124,12 @@ onMounted(() => {
     z-index: 1;
     .vi__service {
         margin-bottom: 3rem;
+
+        .vi__service-count {
+            margin-bottom: 1rem;
+            opacity: .6;
+            font-style: italic;
+        }
     }
     @media #{$l-and-up} {
         display: flex;

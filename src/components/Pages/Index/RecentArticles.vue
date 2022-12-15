@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const articleSectionRef = ref(null);
 const articleSliderRef = ref(null);
+const parallaxHeaderRef = ref(null);
 
 onMounted(() => {
     const gallery = gsap.to(articleSliderRef.value, {
@@ -25,17 +26,39 @@ onMounted(() => {
         onUpdate(self) {
             const velocity = self.getVelocity();
             if (velocity < 0) return;
-            const timeScale = 3 + (velocity / 50);
+            const timeScale = 3 + (velocity / 100);
             gsap.timeline()
                 .to(gallery, { duration: 0.25, timeScale })
                 .to(gallery, { duration: .5, timeScale: 1 });
         }
     });
+
+    const articles = document.querySelectorAll('.vi__article');
+
+    const articleFadeIn = gsap.from(articles, {
+        translateY: 64,
+        stagger: .15,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: articleSectionRef.value
+        }
+    });
+
+    gsap.from(parallaxHeaderRef.value, {
+        translateY: 240,
+        scrollTrigger: {
+            target: articleSectionRef.value,
+            scrub: 2
+        }
+    })
 });
 </script>
 
 <template>
     <section class="vi__article-section vi__section" ref="articleSectionRef">
+        <div class="vi__container extra-large vi__heading-articles">
+            <h3 ref="parallaxHeaderRef">Articles</h3>
+        </div>
         <div class="vi__article-slider" ref="articleSliderRef">
             <article class="vi__article">
                 <RouterLink to="" class="vi__article-link">
@@ -148,6 +171,23 @@ onMounted(() => {
 
 <styles scoped lang="scss">
 @import '@/assets/scss/variables';
+
+.vi__heading-articles {
+    h3 {
+        display: none;
+    }
+
+    @media #{$l-and-up} {
+        h3 {
+            opacity: .075;
+            display: block;
+            font-size: 14vw;
+            margin-bottom: -8vw;
+            color: $primary-color;
+            text-align: right;
+        }
+    }
+}
 
 .vi__article-slider {
     position: relative;
