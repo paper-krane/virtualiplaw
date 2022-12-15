@@ -92,6 +92,7 @@ onMounted(() => {
                 </div>
             </div>
         </div>
+        <span class="vi__scroll">Scroll</span>
     </section>
 </template>
 
@@ -101,6 +102,10 @@ onMounted(() => {
 .vi__hero-banner {
     position: relative;
     padding-top: 158px;
+
+    .vi__scroll {
+        display: none;
+    }
     
     .vi__container.desktop {
         display: flex;
@@ -198,6 +203,31 @@ onMounted(() => {
         min-height: 960px;
         display: flex;
         align-items: center;
+
+        .vi__scroll {
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            position: absolute;
+            bottom: 156px;
+            height: 42px;
+            line-height: 42px;
+            margin-left: -21px;
+            left: 50%;
+            font-size: 1.25rem;
+            font-family: $heading-font-stack;
+            transform-origin: 0% 100%;
+            transform: rotate(90deg);
+
+            &:after {
+                content: '';
+                display: block;
+                width: 128px;
+                height: 1px;
+                background-color: rgba($font-color, .2);
+                margin-left: 1rem;
+            }
+        }
         
         .vi__container.desktop {
             display: flex;

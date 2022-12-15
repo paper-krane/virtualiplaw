@@ -170,22 +170,26 @@ onMounted(() => {
             position: relative;
             color: $white;
 
+            img {
+                border-radius: 32px;
+            }
+
             .vi__article-title {
                 position: absolute;
                 display: flex;
-                align-items: baseline;
+                align-items: flex-end;
                 bottom: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba($dark-site-bg, .7);
+                background-color: rgba($primary-color, .7);
                 backdrop-filter: blur(10px);
                 padding: 1rem;
                 opacity: 0;
                 transition: $transition;
+                border-radius: 32px;
 
                 h5 {
-                    margin-top: auto;
                     font-size: 1.15rem;
                     margin-bottom: 0;
                     flex: 0 0 100%;
@@ -218,10 +222,25 @@ onMounted(() => {
             }
 
             a, a:visited {
-                .vi__article-title {
-                    h5 {
-                        font-size: 1.5rem;
-                    }
+                .vi__link-to {
+                    display: block;
+                    width: 52px;
+                    height: 52px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: transparent;
+                    z-index: 1;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    transition: $transition;
+                }
+            }
+
+            a:hover, a:focus {
+                .vi__link-to {
+                    background-color: transparent;
                 }
             }
         }
@@ -230,6 +249,16 @@ onMounted(() => {
     @media #{$xxl-and-up} {
         .vi__article {
             padding: 0 24px;
+
+            a, a:visited {
+                .vi__article-title {
+                    padding: 2rem 2rem;
+
+                    h5 {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
         }
     }
 }
