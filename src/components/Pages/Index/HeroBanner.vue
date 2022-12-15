@@ -217,11 +217,12 @@ onMounted(() => {
         .vi__hero-video {
             position: absolute;
             right: -30vw;
-            top: 20vh;
+            top: 24vh;
             height: 100%;
             width: 62.8vw;
             height: 62.8vw;
-            border-radius: 50% 0 0 64px;
+            max-height: 1400px;
+            border-radius: 64px 0 0 64px;
             margin-left: auto;
 
             video {

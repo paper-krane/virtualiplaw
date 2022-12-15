@@ -281,6 +281,10 @@ onMounted(() => {
                     color: $font-color;
                 }
 
+                a:not(.vi__btn):hover, a:not(.vi__btn):focus {
+                    color: $primary-accent-color;
+                }
+
                 a.vi__btn, a.vi__btn:visited {
                     font-size: .875rem;
                     margin-left: 1.5rem;

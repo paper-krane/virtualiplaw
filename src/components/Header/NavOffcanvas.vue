@@ -40,6 +40,7 @@ onMounted(() => {
     z-index: 99;
     padding-top: 186px;
     backdrop-filter: blur(10px);
+    overflow-y: auto;
 
     ul {
         list-style: none;

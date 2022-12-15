@@ -120,6 +120,35 @@
                 }
             }
         }
+
+        &-line {
+            padding-left: 0;
+            padding-right: 0;
+            border-bottom: 2px solid $primary-color;
+        }
+    }
+    &.minimal-line {
+        background-color: transparent;
+        background-image: none;
+        color: $font-color;
+        border: none;
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-bottom: 2px solid $primary-color;
+        
+        &:before {
+            content: none;
+        }
+
+        .icon {
+            svg {
+                path {
+                    fill: $font-color;
+                    stroke: $font-color;
+                }
+            }
+        }
     }
 }
 
@@ -152,7 +181,7 @@
         }
     }
 
-    &.minimal {
+    &.minimal, &.minimal-line {
         background-color: transparent;
         background-image: none;
         color: $primary-accent-color;
@@ -165,5 +194,9 @@
                 }
             }
         }
+    }
+
+    &.minimal-line {
+        border-color: $primary-accent-color !important;
     }
 }
