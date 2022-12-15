@@ -209,22 +209,23 @@ onMounted(() => {
             align-items: center;
             pointer-events: none;
             position: absolute;
-            bottom: 156px;
+            bottom: 124px;
             height: 42px;
             line-height: 42px;
-            margin-left: -21px;
-            left: 50%;
-            font-size: 1.25rem;
+            // margin-left: -21px;
+            left:7.5%;
+            font-size: 1rem;
             font-family: $heading-font-stack;
             transform-origin: 0% 100%;
             transform: rotate(90deg);
+            opacity: .25;
 
             &:after {
                 content: '';
                 display: block;
                 width: 128px;
                 height: 1px;
-                background-color: rgba($font-color, .2);
+                background-color: rgba($font-color, .4);
                 margin-left: 1rem;
             }
         }
