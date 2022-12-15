@@ -182,8 +182,7 @@ onMounted(() => {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba($primary-color, .7);
-                backdrop-filter: blur(10px);
+                background-color: rgba($primary-color, .8);
                 padding: 1rem;
                 opacity: 0;
                 transition: $transition;

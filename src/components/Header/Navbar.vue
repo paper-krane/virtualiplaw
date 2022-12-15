@@ -65,8 +65,7 @@ onMounted(() => {
     height: 86px;
     display: flex;
     align-items: center;
-    background-color: rgba($site-bg, .5);
-    backdrop-filter: blur(10px);
+    background-color: rgba($site-bg, .9);
 
 
     &:before {
@@ -192,8 +191,7 @@ onMounted(() => {
 
         &.vi__not-top {
             height: 108px;
-            background-color: rgba($site-bg, .7);
-            backdrop-filter: blur(10px);
+            background-color: rgba($site-bg, .9);
         }
 
         #vi__logo {
