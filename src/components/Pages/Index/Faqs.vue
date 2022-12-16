@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
     <section class="vi__faq-banner vi__section" ref="faqSectionRef">
-        
+        <!-- faqs section -->
     </section>
 </template>
 
