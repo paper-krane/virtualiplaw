@@ -65,7 +65,7 @@ onMounted(() => {
             <article class="vi__article">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-1.jpg" alt="">
+                        <img src="/src/assets/images/article-1.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>
@@ -82,7 +82,7 @@ onMounted(() => {
             <article class="vi__article large">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-2.jpg" alt="">
+                        <img src="/src/assets/images/article-2.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>
@@ -99,7 +99,7 @@ onMounted(() => {
             <article class="vi__article">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-3.jpg" alt="">
+                        <img src="/src/assets/images/article-3.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>
@@ -116,7 +116,7 @@ onMounted(() => {
             <article class="vi__article">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-4.jpg" alt="">
+                        <img src="/src/assets/images/article-4.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>
@@ -134,7 +134,7 @@ onMounted(() => {
             <article class="vi__article" aria-hidden="true">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-1.jpg" alt="">
+                        <img src="/src/assets/images/article-1.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>
@@ -151,7 +151,7 @@ onMounted(() => {
             <article class="vi__article large" aria-hidden="true">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-2.jpg" alt="">
+                        <img src="/src/assets/images/article-2.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>
@@ -168,7 +168,7 @@ onMounted(() => {
             <article class="vi__article" aria-hidden="true">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-3.jpg" alt="">
+                        <img src="/src/assets/images/article-3.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>
@@ -185,7 +185,7 @@ onMounted(() => {
             <article class="vi__article" aria-hidden="true">
                 <RouterLink to="" class="vi__article-link">
                     <figure class="vi__article-image">
-                        <img src="@/assets/images/article-4.jpg" alt="">
+                        <img src="/src/assets/images/article-4.jpg" alt="">
                     </figure>
                     <div class="vi__article-title">
                         <h5>

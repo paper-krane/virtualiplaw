@@ -33,7 +33,7 @@ onMounted(() => {
                 </div>
             </a>
             <RouterLink to="/" id="vi__logo">
-                <img src="@/assets/images/logo.svg" alt="Virtual IP Law, LLC" />
+                <img src="../../assets/images/logo.svg" alt="Virtual IP Law, LLC" />
             </RouterLink>
             <a href="tel:603-729-8853" class="vi__phone">
                 <svg class="vi__phone-icon" width="24px" height="24px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

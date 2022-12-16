@@ -59,11 +59,11 @@ onMounted(() => {
     <section class="vi__hero-banner" ref="sectionRef">
         <div class="vi__container desktop">
             <figure ref="imageRef" class="vi__hero-image-accent">
-                <img src="@/assets/images/background-dots.png" alt="An abstract background of dots"/>
+                <img src="/src/assets/images/background-dots.png" alt="An abstract background of dots"/>
             </figure>
             <figure ref="videoRef" class="vi__hero-video">
                 <video muted loop playsinline autoplay>
-                    <source src="@/assets/videos/hero-video_H.264.mp4" type="video/mp4" />
+                    <source src="/src/assets/videos/hero-video_H.264.mp4" type="video/mp4" />
                 </video>
             </figure>
             <div class="vi__overlay">
