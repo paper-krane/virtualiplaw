@@ -6,10 +6,10 @@
     <section class="vi__call-to-action-section vi__section">
         <div class="vi__container medium">
             <h3>
-                Let us help you protect your ideas 
+                We will help you protect your ideas 
                 and ensure they stay yours.
                 <br />
-                <RouterLink to="#">Get started</RouterLink>
+                <RouterLink to="#">Let's get started</RouterLink>
             </h3>
         </div>
     </section>

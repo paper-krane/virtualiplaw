@@ -39,6 +39,8 @@ onMounted(() => {
         translateY: 64,
         stagger: .15,
         opacity: 0,
+        duration: 2,
+        ease: "power4.out",
         scrollTrigger: {
             trigger: articleSectionRef.value
         }
@@ -70,7 +72,11 @@ onMounted(() => {
                             Always know what you are signing. A guide to reading agreements
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
             <article class="vi__article large">
@@ -83,7 +89,11 @@ onMounted(() => {
                             Do I really need to patent my idea? Yes... and here is why
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
             <article class="vi__article">
@@ -96,7 +106,11 @@ onMounted(() => {
                             Understanding the patent laws
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
             <article class="vi__article">
@@ -109,7 +123,11 @@ onMounted(() => {
                             How to protect your new apps code from being stolen
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
             <!-- Duplicated -->
@@ -123,7 +141,11 @@ onMounted(() => {
                             Always know what you are signing. A guide to reading agreements.
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
             <article class="vi__article large" aria-hidden="true">
@@ -136,7 +158,11 @@ onMounted(() => {
                             Do I really need to patent my idea? Yes... and here is why
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
             <article class="vi__article" aria-hidden="true">
@@ -149,7 +175,11 @@ onMounted(() => {
                             Understanding the patent laws
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
             <article class="vi__article" aria-hidden="true">
@@ -162,7 +192,11 @@ onMounted(() => {
                             How to protect your new apps code from being stolen
                         </h5>
                     </div>
-                    <span class="vi__link-to"></span>
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.5 12H17.5M17.5 12L12.9118 8M17.5 12L12.9118 16" stroke="#363853" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
                 </RouterLink>
             </article>
         </div>
@@ -209,6 +243,10 @@ onMounted(() => {
             display: block;
             position: relative;
             color: $white;
+
+            .icon {
+                display: none;
+            }
 
             img {
                 border-radius: 32px;
@@ -261,23 +299,31 @@ onMounted(() => {
             }
 
             a, a:visited {
-                .vi__link-to {
-                    display: block;
-                    width: 52px;
-                    height: 52px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: transparent;
-                    z-index: 1;
+                position: relative;
+
+                .icon {
                     position: absolute;
-                    bottom: 0;
-                    right: 0;
+                    top: 1rem;
+                    right: 1rem;
+                    width: 32px;
+                    height: 32px;
+                    display: block;
+                    transform: rotate(-45deg);
+                    z-index: 2;
+                    opacity: 0;
                     transition: $transition;
+
+                    svg path {
+                        fill: $white;
+                        stroke: $white;
+                    }
                 }
             }
 
             a:hover, a:focus {
+                .icon {
+                    opacity: 1;
+                }
                 .vi__link-to {
                     background-color: transparent;
                 }
@@ -290,6 +336,11 @@ onMounted(() => {
             padding: 0 24px;
 
             a, a:visited {
+                .icon {
+                    top: 2rem;
+                    right: 2rem;
+                }
+
                 .vi__article-title {
                     padding: 2rem 2rem;
 
